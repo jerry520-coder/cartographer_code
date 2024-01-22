@@ -1,0 +1,14 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"horizontal_vlp16_link" [label="horizontal_vlp16_link"];
+"imu_link" [label="imu_link"];
+"vertical_vlp16_link" [label="vertical_vlp16_link"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "horizontal_vlp16_link_joint" [label="xyz: 0.01 0 0.19 \nrpy: 0 -0.1745 -3.14159"]
+"horizontal_vlp16_link_joint" -> "horizontal_vlp16_link"
+"base_link" -> "imu_link_joint" [label="xyz: 0 0 0 \nrpy: -3.14159 -0 0"]
+"imu_link_joint" -> "imu_link"
+"base_link" -> "vertical_vlp16_link_joint" [label="xyz: 0.19 0 0.04 \nrpy: 0 1.3963 0"]
+"vertical_vlp16_link_joint" -> "vertical_vlp16_link"
+}
